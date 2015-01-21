@@ -1,0 +1,23 @@
+/* CSS Document */
+.note{
+	background-image:url(../images/stickynote-large.png);	
+	background-repeat:no-repeat;
+	border:0px solid black;
+	background-position:left top;
+	width:225px;
+	height:228px;
+}
+.note textarea{
+	background-color:transparent;
+	position:relative;
+	margin-top:10px;
+	margin-left:25px;
+	height:180px;
+	border:0px black solid;
+	resize:none;
+}
+.pos{
+	position:absolute;
+	top:0px;
+	left:0px;	
+}
