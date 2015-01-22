@@ -7,22 +7,7 @@
 <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
 		<script type="text/javascript" src="js/ui.core.js"></script>
 		<script type="text/javascript" src="js/ui.draggable.js"></script>
- <script>
-  $(function() {
-    $( ".draggable" ).draggable();
-  });
-  $(document).ready(
-  function(){
-	  $("#add").click(
-		function(){
-			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
-			$("body").append($newDiv);
-			$newDiv.addClass("pos");
-			$( ".draggable" ).draggable();
-		});
-  }
-  	);
-  </script>
+		<script type="text/javascript" src="js/custom.js"></script>
 </head>
 
 <body>
