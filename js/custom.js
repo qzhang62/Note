@@ -2,6 +2,7 @@
 $(function() {
     $( ".draggable" ).draggable();
   });
+var strOut="";		// all text in notes div
   $(document).ready(
   function(){
 	  $("#add").click(
@@ -29,11 +30,17 @@ $(function() {
 		  // output all textarea text to console
 		  function() {
 			  console.clear();
+			  strOut="";
 			  $("textarea").each(
 				function(index){
-					console.log($(this).val());
+					//console.log($(this).val());
+					if($(this).val()) {	// if the value is not empty
+						strOut += $(this).val();
+						strOut += "\n<<<<<<<<<<\n";   // separate text between note
+					}
 				}
 			  );
+			  console.log(strOut);
 		  }
 	  );
   }
