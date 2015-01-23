@@ -12,6 +12,7 @@
 
 <body>
 <button id="add">Add Note</button>
+<button id="output">Output</button>
 <div class="note draggable">
 <textarea></textarea>
 </div>
