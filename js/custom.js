@@ -2,6 +2,16 @@
 $(function() {
     $( ".draggable" ).draggable();
   });
+$(function () {		// disable F5 to refresh
+	$(document).keydown(function (e) {
+		if((e.which || e.keyCode) != 116){   // the key hit is not F5
+			return true;
+		}else{
+			console.log("Cannot refresh");  // the key hit is F5
+			return false;
+		}
+	});
+});
 var strOut="";		// all text in notes div
   $(document).ready(
   function(){
