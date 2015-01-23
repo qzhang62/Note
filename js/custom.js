@@ -8,6 +8,13 @@ $(function() {
 		function(){
 			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
 			$("body").append($newDiv);
+			var newWidth=$(document).width()/2-$newDiv.width()/2;
+			$newDiv.css(	// offset the position of new added note div
+				{
+					top:150+"px",
+					left:newWidth+"px"
+				}
+			);
 			$newDiv.addClass("pos");
 			var $exit=$('<button class="exit">x</button>');
 			$newDiv.append($exit);
