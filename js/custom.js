@@ -9,6 +9,13 @@ $(function() {
 			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
 			$("body").append($newDiv);
 			$newDiv.addClass("pos");
+			var $exit=$('<button class="exit">x</button>');
+			$newDiv.append($exit);
+			$(".exit").click(    // click to delete this note
+				function(){
+					$(this).parent(".note").remove();
+				}
+			);
 			$( ".draggable" ).draggable();
 		});
 	  $("#output").click(
