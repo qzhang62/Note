@@ -58,5 +58,12 @@ var strOut="";		// all text in notes div
 			  outputContentNewWindow(strOut);
 		  }
 	  );
+	  $("#removeAll").click(		// remove all the notes
+		  function(){
+			  if(confirm("Are you sure to delete all notes?")) {
+				  $(".note").remove();
+			  }
+		  }
+	  );
   }
   	);
