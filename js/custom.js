@@ -12,6 +12,10 @@ $(function () {		// disable F5 to refresh
 		}
 	});
 });
+function outputContentNewWindow(str){	// function to create a new page
+	var w=window.open();
+	$(w.document.body).html(str);
+}
 var strOut="";		// all text in notes div
   $(document).ready(
   function(){
@@ -50,7 +54,8 @@ var strOut="";		// all text in notes div
 					}
 				}
 			  );
-			  console.log(strOut);
+			  strOut=strOut.replace(/\n/g, "<br />");  // replace \n with </br>
+			  outputContentNewWindow(strOut);
 		  }
 	  );
   }
