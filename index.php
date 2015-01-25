@@ -7,7 +7,6 @@
 <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
 		<script type="text/javascript" src="js/ui.core.js"></script>
 		<script type="text/javascript" src="js/ui.draggable.js"></script>
-		<script type="text/javascript" src="js/custom.js"></script>
 </head>
 
 <body>
@@ -17,5 +16,6 @@
 <div class="note draggable">
 <textarea></textarea>
 </div>
+<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

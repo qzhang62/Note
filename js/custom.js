@@ -17,17 +17,18 @@ function outputContentNewWindow(str){	// function to create a new page
 	$(w.document.body).html(str);
 }
 var strOut="";		// all text in notes div
+var newPosX=$(".note").position().left+$(".note").width();
+var newPosY=$(".note").position().top;
   $(document).ready(
   function(){
 	  $("#add").click(
 		function(){
 			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
 			$("body").append($newDiv);
-			var newWidth=$(document).width()/2-$newDiv.width()/2;
 			$newDiv.css(	// offset the position of new added note div
 				{
-					top:150+"px",
-					left:newWidth+"px"
+					top:newPosY+"px",
+					left:newPosX+"px"
 				}
 			);
 			$newDiv.addClass("pos");
@@ -38,6 +39,12 @@ var strOut="";		// all text in notes div
 					$(this).parent(".note").remove();
 				}
 			);
+			newPosX=$(".note:last").position().left+$(".note:last").width();
+			newPosY=$(".note:last").position().top;
+			if(newPosX+$(".note").width()>$(document).width()){
+				newPosY=$(".note:last").position().top+$(".note:last").height();
+				newPosX=8;
+			}
 			$( ".draggable" ).draggable();
 		});
 	  $("#output").click(
@@ -62,6 +69,8 @@ var strOut="";		// all text in notes div
 		  function(){
 			  if(confirm("Are you sure to delete all notes?")) {
 				  $(".note").remove();
+				  newPosX=8;
+				  newPosY=29;
 			  }
 		  }
 	  );
