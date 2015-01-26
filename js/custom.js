@@ -38,7 +38,7 @@ var newPosY=iniY;
 					$(this).parent(".note").remove();
 				}
 			);
-			newPosX=$(".note:last").position().left+$(".note:last").width();
+			newPosX=$(".note:last").position().left+$(".note:last").width()-14;
 			newPosY=$(".note:last").position().top;
 			if(newPosX+$(".note").width()>$(document).width()){
 				newPosY=$(".note:last").position().top+$(".note:last").height();
