@@ -12,7 +12,7 @@
 <body>
 <button id="add">Add Note</button>
 <button id="output">Output</button>
-<button id="removeAll">Remove all note</button>
+<button id="removeAll">Remove all</button>
 <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

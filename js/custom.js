@@ -67,6 +67,9 @@ var newPosY=iniY;
 	  );
 	  $("#removeAll").click(		// remove all the notes
 		  function(){
+			  if($(".note").length===0){	// check if no elements is selected
+				  return;
+			  }
 			  if(confirm("Are you sure to delete all notes?")) {
 				  $(".note").remove();
 				  newPosX=iniX;
