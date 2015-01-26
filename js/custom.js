@@ -1,7 +1,4 @@
 // main control part for the note behavior
-$(function() {
-    $( ".draggable" ).draggable();
-  });
 $(function () {		// disable F5 to refresh
 	$(document).keydown(function (e) {
 		if((e.which || e.keyCode) != 116){   // the key hit is not F5
@@ -17,8 +14,10 @@ function outputContentNewWindow(str){	// function to create a new page
 	$(w.document.body).html(str);
 }
 var strOut="";		// all text in notes div
-var newPosX=$(".note").position().left+$(".note").width();
-var newPosY=$(".note").position().top;
+var iniX=8;	// default left position for the first note
+var iniY=29;	// default top position for the first note
+var newPosX=iniX;
+var newPosY=iniY;
   $(document).ready(
   function(){
 	  $("#add").click(
@@ -47,6 +46,7 @@ var newPosY=$(".note").position().top;
 			}
 			$( ".draggable" ).draggable();
 		});
+	  $('#add').click();	// add the first note
 	  $("#output").click(
 		  // output all textarea text to console
 		  function() {
@@ -69,8 +69,8 @@ var newPosY=$(".note").position().top;
 		  function(){
 			  if(confirm("Are you sure to delete all notes?")) {
 				  $(".note").remove();
-				  newPosX=8;
-				  newPosY=29;
+				  newPosX=iniX;
+				  newPosY=iniY;
 			  }
 		  }
 	  );
