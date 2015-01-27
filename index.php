@@ -13,6 +13,7 @@
 <button id="add">Add Note</button>
 <button id="output">Output</button>
 <button id="removeAll">Remove all</button>
+<button id="removeEmpty">Remove empty</button>
 <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>

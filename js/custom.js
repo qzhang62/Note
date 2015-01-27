@@ -79,5 +79,19 @@ var newPosY=iniY;
 			  }
 		  }
 	  );
+	  $("#removeEmpty").click(
+		function(){
+			if($(".note").length===0){	// check if no elements is selected
+				return;
+			}
+			$(".note").each(
+				function(){
+					if(!$(this).find("textarea").val()){
+						$(this).remove();
+					}
+				}
+			);
+		}
+	  );
   }
   	);
