@@ -52,6 +52,7 @@ var newPosY=iniY;
 		  function() {
 			  console.clear();
 			  strOut="";
+			  if($("textarea").length===0) return;
 			  $("textarea").each(
 				function(index){
 					//console.log($(this).val());
@@ -61,6 +62,7 @@ var newPosY=iniY;
 					}
 				}
 			  );
+			  if(strOut==='') return;
 			  strOut=strOut.replace(/\n/g, "<br />");  // replace \n with </br>
 			  outputContentNewWindow(strOut);
 		  }
