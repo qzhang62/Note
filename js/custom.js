@@ -20,6 +20,7 @@ var newPosX=iniX;
 var newPosY=iniY;
   $(document).ready(
   function(){
+	  $("button").attr("tabIndex",-1);  // remove navigator buttons from tabindex
 	  $("#add").click(
 		function(){
 			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
@@ -32,6 +33,7 @@ var newPosY=iniY;
 			);
 			$newDiv.addClass("pos");
 			var $exit=$('<button class="exit">x</button>');
+			$exit.attr('tabindex',-1);	// remove exit button from tabindex
 			$newDiv.append($exit);
 			$(".exit").click(    // click to delete this note
 				function(){
