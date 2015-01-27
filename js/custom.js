@@ -79,7 +79,7 @@ var newPosY=iniY;
 			  }
 		  }
 	  );
-	  $("#removeEmpty").click(
+	  $("#removeEmpty").click(	// remove empty notes
 		function(){
 			if($(".note").length===0){	// check if no elements is selected
 				return;
@@ -92,6 +92,30 @@ var newPosY=iniY;
 				}
 			);
 		}
+	  );
+	  $("#arrange").click(	// remove empty notes
+		  function(){
+			  if($(".note").length===0){	// check if no elements is selected
+				  return;
+			  }
+			  newPosX=iniX;
+			  newPosY=iniY;
+			  $(".note").each(
+				  function(){
+					  $(this).css(
+						  {
+							  top:newPosY+"px",
+							  left:newPosX+"px"
+						  }
+					  );
+					  newPosX+=($(".note:last").width()-14);
+					  if(newPosX+$(".note").width()>$(document).width()){
+						  newPosY+=$(".note:last").height();
+						  newPosX=iniX;
+					  }
+				  }
+			  );
+		  }
 	  );
   }
   	);

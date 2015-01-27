@@ -14,6 +14,7 @@
 <button id="output">Output</button>
 <button id="removeAll">Remove all</button>
 <button id="removeEmpty">Remove empty</button>
+<button id="arrange">Arrange</button>
 <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
