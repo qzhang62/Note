@@ -1,4 +1,7 @@
 /* CSS Document */
+body{
+	background-image:url(../images/swirl_pattern.png);
+}
 .note{
 	background-image:url(../images/stickynote-large.png);	
 	background-repeat:no-repeat;
