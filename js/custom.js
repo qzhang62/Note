@@ -15,12 +15,13 @@ function outputContentNewWindow(str){	// function to create a new page
 }
 var strOut="";		// all text in notes div
 var iniX=8;	// default left position for the first note
-var iniY=29;	// default top position for the first note
+var iniY=35;	// default top position for the first note
 var newPosX=iniX;
 var newPosY=iniY;
   $(document).ready(
   function(){
 	  $("button").attr("tabIndex",-1);  // remove navigator buttons from tabindex
+	  $("button").addClass("button");
 	  $("#add").click(
 		function(){
 			var $newDiv=$('<div class="note draggable"><textarea></textarea></div>');
